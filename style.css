@@ -2,8 +2,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    margin: 0;
+    margin-top: 350px;
+    margin-bottom: 50px;
 }
 main{
     display: flex;
@@ -73,4 +73,9 @@ fieldset{
     position: absolute;
     right: 10px;
     font-size: 20px;
+}
+.delete_book{
+    margin: 0;
+    cursor: pointer;
+    background-color: rgb(238, 94, 94);
 }
