@@ -1,0 +1,76 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    border: 1px solid black;
+}
+.main_top{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+button{
+    height: 50px;
+    width: 150px;
+    background-color: rgb(7, 218, 7);
+    border: 0px;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+button:hover{
+    background-color: rgb(138, 231, 138);
+    cursor: pointer;
+}
+table{
+    width: 100%;
+    border-top: 1px solid black;
+    border-spacing: 0px;
+}
+tr{
+    text-align: center;
+}
+tr:nth-child(even){
+    background-color: lightgreen;
+}
+.add_book_div{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 30px;
+    border-radius: 5px;
+    border: 1px solid black;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.add_book_div h3{
+    text-align: center;
+    margin: 0;
+}
+fieldset{
+    display: flex;
+    flex-direction: column;
+    border: none;
+    width: 80%;
+}
+.add_book_div_text{
+    display: flex;
+}
+.x_sign:hover{
+    cursor: pointer;
+}
+.x_sign{
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+}
