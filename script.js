@@ -56,7 +56,21 @@ function displayLibrary(){
         cell1.textContent=item.title;
         cell2.textContent=item.author;
         cell3.textContent=item.pages;
-        cell4.textContent=item.readed;
+        
+        const button=document.createElement("button");
+        if(item.readed==="no"){
+            button.classList.add("read_button_not");
+            button.textContent="Not readed";
+        }
+        else{
+            button.classList.add("read_button_yes");
+            button.textContent="Readed";
+        }
+        
+        cell4.appendChild(button);
+
+        button.addEventListener('click', ()=>changeRead(item.id, button));
+
         
         const x=document.createElement("p");
         x.textContent="X";
@@ -66,6 +80,7 @@ function displayLibrary(){
         x.addEventListener('click', ()=>removeBook(item.id))
 
     })
+    console.log(myLibrary);
     
 }
 
@@ -77,4 +92,18 @@ function removeBook(bookId){
     myLibrary.splice(index,1);
     displayLibrary();
     
+}
+
+function changeRead(bookId, btn){
+    const index=myLibrary.findIndex(checkId);
+    function checkId(book){
+        return book.id===bookId;
+    }
+    if(myLibrary[index].readed==="no"){
+        myLibrary[index].readed="yes";
+    }
+    else{
+        myLibrary[index].readed="no";
+    }
+    displayLibrary();
 }
