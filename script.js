@@ -94,7 +94,7 @@ function removeBook(bookId){
     
 }
 
-function changeRead(bookId, btn){
+function changeRead(bookId){
     const index=myLibrary.findIndex(checkId);
     function checkId(book){
         return book.id===bookId;
